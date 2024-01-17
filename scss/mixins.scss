@@ -14,3 +14,9 @@
     display: grid;
     place-content: center;
 }
+
+@mixin displayGrid {
+    display: grid;
+    grid-template-columns: $size-icon auto;
+    gap: $spacing-sm;
+}

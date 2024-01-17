@@ -8,14 +8,20 @@ $colour-grey: hsl(231, 7%, 60%);
 $colour-white: hsl(0, 0%, 100%);
 
 $font-size-paragraph: 1rem;
+$font-size-header: 50px;
 $font-family-roboto: "Roboto";
 $font-weight-400: 400;
 $font-weight-700: 700;
 
 $spacing-md: 20px;
 $spacing-lg: 30px;
+$spacing-sm: 10px;
 
 $border-radius-std: 25px;
 $border-radius-sm: 15px;
 
 $img-signup-desktop: url("../images/illustration-sign-up-desktop.svg");
+$icon-list: url("../images/icon-list.svg");
+
+$size-max-width: 400px;
+$size-icon: 22px;

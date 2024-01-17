@@ -17,8 +17,39 @@ main {
         padding: $spacing-md;
         background-color: $colour-white;
 
+        span {
+            font-family: $font-family-roboto;
+        }
+
         .infoColumn {
+            @include displayFlexCol;
+            gap: $spacing-lg;
             padding: $spacing-lg;
+            justify-content: center;
+            max-width: $size-max-width;
+
+            .infoSection {
+                @include displayFlexCol;
+                gap: $spacing-md;
+
+                .infoHeader {
+                    font-size: $font-size-header;
+                    font-weight: $font-weight-700;
+                }
+
+                .updateMatrix {
+                    @include displayGrid;
+
+                    .tickIcon {
+                        background: $icon-list;
+                        background-repeat: no-repeat;
+                        height: $size-icon;
+                        width: $size-icon;
+                    }
+                }
+            }
+
+
         }
 
         .imgColumn .signupImg {
@@ -27,7 +58,7 @@ main {
             background-size: cover;
             border-radius: $border-radius-sm;
             height: 600px;
-            width: 400px;
+            width: $size-max-width;
         }
 
     }

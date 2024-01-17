@@ -16,8 +16,36 @@ main .card {
   padding: 20px;
   background-color: hsl(0deg, 0%, 100%);
 }
+main .card span {
+  font-family: "Roboto";
+}
 main .card .infoColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   padding: 30px;
+  justify-content: center;
+  max-width: 400px;
+}
+main .card .infoColumn .infoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main .card .infoColumn .infoSection .infoHeader {
+  font-size: 50px;
+  font-weight: 700;
+}
+main .card .infoColumn .infoSection .updateMatrix {
+  display: grid;
+  grid-template-columns: 22px auto;
+  gap: 10px;
+}
+main .card .infoColumn .infoSection .updateMatrix .tickIcon {
+  background: url("../images/icon-list.svg");
+  background-repeat: no-repeat;
+  height: 22px;
+  width: 22px;
 }
 main .card .imgColumn .signupImg {
   background: url("../images/illustration-sign-up-desktop.svg");
