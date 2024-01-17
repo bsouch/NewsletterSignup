@@ -1,3 +1,19 @@
+body,
+main {
+  min-block-size: 100dvb;
+}
 
+main {
+  display: grid;
+  place-content: center;
+  background-color: hsl(235deg, 18%, 26%);
+}
+main .card {
+  display: flex;
+  flex-direction: row;
+  border-radius: 25px;
+  padding: 20px;
+  background-color: hsl(0deg, 0%, 100%);
+}
 
 /*# sourceMappingURL=index.css.map */

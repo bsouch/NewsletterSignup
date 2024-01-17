@@ -9,3 +9,8 @@
     display: flex;
     flex-direction: column;
 }
+
+@mixin displayGridCenter {
+    display: grid;
+    place-content: center;
+}

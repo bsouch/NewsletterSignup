@@ -1,0 +1,19 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+body,
+main {
+    min-block-size: 100dvb;
+}
+
+main {
+    @include displayGridCenter;
+    background-color: $colour-charcoal-grey;
+
+    .card {
+        @include displayFlexRow;
+        border-radius: $border-radius-std;
+        padding: $spacing-md;
+        background-color: $colour-white;
+    }
+}
