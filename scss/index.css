@@ -11,9 +11,21 @@ main {
 main .card {
   display: flex;
   flex-direction: row;
+  gap: 30px;
   border-radius: 25px;
   padding: 20px;
   background-color: hsl(0deg, 0%, 100%);
+}
+main .card .infoColumn {
+  padding: 30px;
+}
+main .card .imgColumn .signupImg {
+  background: url("../images/illustration-sign-up-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+  height: 600px;
+  width: 400px;
 }
 
 /*# sourceMappingURL=index.css.map */

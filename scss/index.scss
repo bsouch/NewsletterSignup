@@ -12,8 +12,23 @@ main {
 
     .card {
         @include displayFlexRow;
+        gap: $spacing-lg;
         border-radius: $border-radius-std;
         padding: $spacing-md;
         background-color: $colour-white;
+
+        .infoColumn {
+            padding: $spacing-lg;
+        }
+
+        .imgColumn .signupImg {
+            background: $img-signup-desktop;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: $border-radius-sm;
+            height: 600px;
+            width: 400px;
+        }
+
     }
 }
