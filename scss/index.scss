@@ -17,8 +17,15 @@ main {
         padding: $spacing-md;
         background-color: $colour-white;
 
-        span {
+        span,
+        button,
+        input,
+        label {
             font-family: $font-family-roboto;
+        }
+
+        .hidden {
+            display: none;
         }
 
         .infoColumn {
@@ -49,6 +56,46 @@ main {
                 }
             }
 
+            .formSection {
+                @include displayFlexCol;
+                gap: $spacing-md;
+
+                .inputWrapper {
+
+                    .emailLabel {
+                        font-size: $font-size-input-label;
+                        font-weight: $font-weight-700;
+                    }
+
+                    .emailError {
+                        //Move to more generic area.
+                        float: right;
+                        font-size: $font-size-input-label;
+                    }
+
+                    .emailInput {
+                        width: $size-full-parent;
+                        margin-top: $spacing-xs;
+                        border-radius: $border-radius-input;
+                        height: $size-input-height;
+                        text-indent: $spacing-md;
+                        color: $colour-grey;
+                        border: 1px solid $colour-grey;
+                        padding: 0;
+                    }
+                }
+
+                .subscribeBtn {
+                    width: $size-full-parent;
+                    height: $size-button-height + 5px;
+                    border-radius: $border-radius-input;
+                    border: none;
+                    background-color: $colour-dark-slate-grey;
+                    color: $colour-white;
+                    font-weight: $font-weight-400;
+                    border: 1px solid transparent;
+                }
+            }
 
         }
 

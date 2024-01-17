@@ -16,8 +16,14 @@ main .card {
   padding: 20px;
   background-color: hsl(0deg, 0%, 100%);
 }
-main .card span {
+main .card span,
+main .card button,
+main .card input,
+main .card label {
   font-family: "Roboto";
+}
+main .card .hidden {
+  display: none;
 }
 main .card .infoColumn {
   display: flex;
@@ -46,6 +52,39 @@ main .card .infoColumn .infoSection .updateMatrix .tickIcon {
   background-repeat: no-repeat;
   height: 22px;
   width: 22px;
+}
+main .card .infoColumn .formSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main .card .infoColumn .formSection .inputWrapper .emailLabel {
+  font-size: 12px;
+  font-weight: 700;
+}
+main .card .infoColumn .formSection .inputWrapper .emailError {
+  float: right;
+  font-size: 12px;
+}
+main .card .infoColumn .formSection .inputWrapper .emailInput {
+  width: 100%;
+  margin-top: 6px;
+  border-radius: 5px;
+  height: 50px;
+  text-indent: 20px;
+  color: hsl(231deg, 7%, 60%);
+  border: 1px solid hsl(231deg, 7%, 60%);
+  padding: 0;
+}
+main .card .infoColumn .formSection .subscribeBtn {
+  width: 100%;
+  height: 55px;
+  border-radius: 5px;
+  border: none;
+  background-color: hsl(234deg, 29%, 20%);
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 400;
+  border: 1px solid transparent;
 }
 main .card .imgColumn .signupImg {
   background: url("../images/illustration-sign-up-desktop.svg");
