@@ -63,16 +63,23 @@ main {
 
                 .inputWrapper {
 
-                    .emailLabel {
-                        font-size: $font-size-input-label;
-                        font-weight: $font-weight-700;
+                    .labelWrapper {
+                        @include displayFlexRow;
+                        justify-content: space-between;
+
+                        .emailLabel {
+                            font-size: $font-size-input-label;
+                            font-weight: $font-weight-700;
+                        }
+
+                        .emailErrorLabel {
+                            float: right;
+                            font-size: $font-size-input-label;
+                            color: $colour-tomato;
+                        }
                     }
 
-                    .emailError {
-                        //Move to more generic area.
-                        float: right;
-                        font-size: $font-size-input-label;
-                    }
+
 
                     .emailInput {
                         width: $size-full-parent;
@@ -83,6 +90,14 @@ main {
                         color: $colour-grey;
                         border: 1px solid $colour-grey;
                         padding: 0;
+
+                        &.hasError,
+                        &.hasError::placeholder {
+                            background-color: $colour-light-red;
+                            color: $colour-tomato;
+                            border-color: $colour-tomato;
+                            opacity: 1;
+                        }
                     }
                 }
 

@@ -59,13 +59,19 @@ main .card .infoColumn .formSection {
   flex-direction: column;
   gap: 20px;
 }
-main .card .infoColumn .formSection .inputWrapper .emailLabel {
+main .card .infoColumn .formSection .inputWrapper .labelWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main .card .infoColumn .formSection .inputWrapper .labelWrapper .emailLabel {
   font-size: 0.75rem;
   font-weight: 700;
 }
-main .card .infoColumn .formSection .inputWrapper .emailError {
+main .card .infoColumn .formSection .inputWrapper .labelWrapper .emailErrorLabel {
   float: right;
   font-size: 0.75rem;
+  color: hsl(4deg, 100%, 67%);
 }
 main .card .infoColumn .formSection .inputWrapper .emailInput {
   width: 100%;
@@ -76,6 +82,12 @@ main .card .infoColumn .formSection .inputWrapper .emailInput {
   color: hsl(231deg, 7%, 60%);
   border: 1px solid hsl(231deg, 7%, 60%);
   padding: 0;
+}
+main .card .infoColumn .formSection .inputWrapper .emailInput.hasError, main .card .infoColumn .formSection .inputWrapper .emailInput.hasError::placeholder {
+  background-color: hsl(0deg, 100%, 95%);
+  color: hsl(4deg, 100%, 67%);
+  border-color: hsl(4deg, 100%, 67%);
+  opacity: 1;
 }
 main .card .infoColumn .formSection .subscribeBtn {
   width: 100%;
