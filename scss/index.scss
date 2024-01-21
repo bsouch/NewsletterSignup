@@ -17,15 +17,15 @@ main {
         padding: $spacing-md;
         background-color: $colour-white;
 
+        .hidden {
+            display: none;
+        }
+
         span,
         button,
         input,
         label {
             font-family: $font-family-roboto;
-        }
-
-        .hidden {
-            display: none;
         }
 
         .infoColumn {
@@ -78,41 +78,8 @@ main {
                             color: $colour-tomato;
                         }
                     }
-
-
-
-                    .emailInput {
-                        width: $size-full-parent;
-                        margin-top: $spacing-xs;
-                        border-radius: $border-radius-input;
-                        height: $size-input-height;
-                        text-indent: $spacing-md;
-                        color: $colour-grey;
-                        border: 1px solid $colour-grey;
-                        padding: 0;
-
-                        &.hasError,
-                        &.hasError::placeholder {
-                            background-color: $colour-light-red;
-                            color: $colour-tomato;
-                            border-color: $colour-tomato;
-                            opacity: 1;
-                        }
-                    }
-                }
-
-                .subscribeBtn {
-                    width: $size-full-parent;
-                    height: $size-button-height;
-                    border-radius: $border-radius-input;
-                    border: none;
-                    background-color: $colour-dark-slate-grey;
-                    color: $colour-white;
-                    font-weight: $font-weight-400;
-                    border: 1px solid transparent;
                 }
             }
-
         }
 
         .imgColumn {
@@ -125,6 +92,48 @@ main {
                 border-radius: $border-radius-sm;
                 height: $size-full-parent;
                 width: $size-full-parent;
+            }
+        }
+
+        input {
+            width: $size-full-parent;
+            margin-top: $spacing-xs;
+            border-radius: $border-radius-input;
+            height: $size-input-height;
+            text-indent: $spacing-md;
+            color: $colour-grey;
+            border: 1px solid $colour-grey;
+            padding: 0;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &.hasError,
+            &.hasError::placeholder {
+                background-color: $colour-light-red;
+                color: $colour-tomato;
+                border-color: $colour-tomato;
+                opacity: 1;
+            }
+        }
+
+        button {
+
+            &.subscribeBtn {
+                width: $size-full-parent;
+                height: $size-button-height;
+                border-radius: $border-radius-input;
+                border: none;
+                background-color: $colour-dark-slate-grey;
+                color: $colour-white;
+                font-weight: $font-weight-400;
+                border: 1px solid transparent;
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-image: linear-gradient(to right, $colour-red, $colour-orange);
             }
         }
     }

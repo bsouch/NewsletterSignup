@@ -16,14 +16,14 @@ main .card {
   padding: 20px;
   background-color: hsl(0deg, 0%, 100%);
 }
+main .card .hidden {
+  display: none;
+}
 main .card span,
 main .card button,
 main .card input,
 main .card label {
   font-family: "Roboto";
-}
-main .card .hidden {
-  display: none;
 }
 main .card .infoColumn {
   display: flex;
@@ -73,32 +73,6 @@ main .card .infoColumn .formSection .inputWrapper .labelWrapper .emailErrorLabel
   font-size: 0.75rem;
   color: hsl(4deg, 100%, 67%);
 }
-main .card .infoColumn .formSection .inputWrapper .emailInput {
-  width: 100%;
-  margin-top: 6px;
-  border-radius: 5px;
-  height: 50px;
-  text-indent: 20px;
-  color: hsl(231deg, 7%, 60%);
-  border: 1px solid hsl(231deg, 7%, 60%);
-  padding: 0;
-}
-main .card .infoColumn .formSection .inputWrapper .emailInput.hasError, main .card .infoColumn .formSection .inputWrapper .emailInput.hasError::placeholder {
-  background-color: hsl(0deg, 100%, 95%);
-  color: hsl(4deg, 100%, 67%);
-  border-color: hsl(4deg, 100%, 67%);
-  opacity: 1;
-}
-main .card .infoColumn .formSection .subscribeBtn {
-  width: 100%;
-  height: 50px;
-  border-radius: 5px;
-  border: none;
-  background-color: hsl(234deg, 29%, 20%);
-  color: hsl(0deg, 0%, 100%);
-  font-weight: 400;
-  border: 1px solid transparent;
-}
 main .card .imgColumn {
   height: 600px;
   width: 400px;
@@ -109,6 +83,39 @@ main .card .imgColumn .signupImg {
   border-radius: 15px;
   height: 100%;
   width: 100%;
+}
+main .card input {
+  width: 100%;
+  margin-top: 6px;
+  border-radius: 5px;
+  height: 50px;
+  text-indent: 20px;
+  color: hsl(231deg, 7%, 60%);
+  border: 1px solid hsl(231deg, 7%, 60%);
+  padding: 0;
+}
+main .card input:hover {
+  cursor: pointer;
+}
+main .card input.hasError, main .card input.hasError::placeholder {
+  background-color: hsl(0deg, 100%, 95%);
+  color: hsl(4deg, 100%, 67%);
+  border-color: hsl(4deg, 100%, 67%);
+  opacity: 1;
+}
+main .card button.subscribeBtn {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  background-color: hsl(234deg, 29%, 20%);
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 400;
+  border: 1px solid transparent;
+}
+main .card button:hover {
+  cursor: pointer;
+  background-image: linear-gradient(to right, hsl(0deg, 100%, 65%), hsl(24deg, 100%, 50%));
 }
 
 @media (max-width: 767px) {
