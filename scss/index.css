@@ -32,6 +32,7 @@ main .card .infoColumn {
   padding: 30px;
   justify-content: center;
   max-width: 400px;
+  flex-shrink: 3;
 }
 main .card .infoColumn .infoSection {
   display: flex;
@@ -39,7 +40,7 @@ main .card .infoColumn .infoSection {
   gap: 20px;
 }
 main .card .infoColumn .infoSection .infoHeader {
-  font-size: 50px;
+  font-size: 3.125rem;
   font-weight: 700;
 }
 main .card .infoColumn .infoSection .updateMatrix {
@@ -59,12 +60,12 @@ main .card .infoColumn .formSection {
   gap: 20px;
 }
 main .card .infoColumn .formSection .inputWrapper .emailLabel {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 700;
 }
 main .card .infoColumn .formSection .inputWrapper .emailError {
   float: right;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 main .card .infoColumn .formSection .inputWrapper .emailInput {
   width: 100%;
@@ -78,7 +79,7 @@ main .card .infoColumn .formSection .inputWrapper .emailInput {
 }
 main .card .infoColumn .formSection .subscribeBtn {
   width: 100%;
-  height: 55px;
+  height: 50px;
   border-radius: 5px;
   border: none;
   background-color: hsl(234deg, 29%, 20%);
@@ -86,13 +87,73 @@ main .card .infoColumn .formSection .subscribeBtn {
   font-weight: 400;
   border: 1px solid transparent;
 }
+main .card .imgColumn {
+  height: 600px;
+  width: 400px;
+}
 main .card .imgColumn .signupImg {
   background: url("../images/illustration-sign-up-desktop.svg");
   background-repeat: no-repeat;
-  background-size: cover;
   border-radius: 15px;
-  height: 600px;
-  width: 400px;
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  main .card {
+    gap: 15px;
+  }
+  main .card .infoColumn {
+    padding: 0;
+  }
+}
+@media (max-width: 660px) {
+  main .card {
+    gap: 0;
+  }
+  main .card .imgColumn {
+    width: 0;
+  }
+  main .card .imgColumn .signupImg {
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+  main .card {
+    flex-direction: column-reverse;
+    gap: 35px;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border-radius: 0;
+  }
+  main .card .infoColumn {
+    padding: 0 20px 35px;
+    gap: 35px;
+  }
+  main .card .infoColumn .infoSection {
+    padding: 0;
+    gap: 25px;
+  }
+  main .card .infoColumn .infoSection .infoHeader {
+    font-size: 2.5rem;
+  }
+  main .card .infoColumn .infoSection .updateMatrix {
+    gap: 15px;
+  }
+  main .card .infoColumn .infoSection .updateMatrix .infoParagraph {
+    line-height: 25px;
+  }
+  main .card .imgColumn {
+    width: 100%;
+    height: 280px;
+  }
+  main .card .imgColumn .signupImg {
+    display: block;
+    background-image: url("../images/illustration-sign-up-mobile.svg");
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

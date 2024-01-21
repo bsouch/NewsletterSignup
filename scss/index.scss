@@ -34,6 +34,7 @@ main {
             padding: $spacing-lg;
             justify-content: center;
             max-width: $size-max-width;
+            flex-shrink: 3;
 
             .infoSection {
                 @include displayFlexCol;
@@ -87,7 +88,7 @@ main {
 
                 .subscribeBtn {
                     width: $size-full-parent;
-                    height: $size-button-height + 5px;
+                    height: $size-button-height;
                     border-radius: $border-radius-input;
                     border: none;
                     background-color: $colour-dark-slate-grey;
@@ -99,14 +100,95 @@ main {
 
         }
 
-        .imgColumn .signupImg {
-            background: $img-signup-desktop;
-            background-repeat: no-repeat;
-            background-size: cover;
-            border-radius: $border-radius-sm;
-            height: 600px;
+        .imgColumn {
+            height: $size-desktop-card-height;
             width: $size-max-width;
-        }
 
+            .signupImg {
+                background: $img-signup-desktop;
+                background-repeat: no-repeat;
+                border-radius: $border-radius-sm;
+                height: $size-full-parent;
+                width: $size-full-parent;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    main {
+
+        .card {
+            gap: $spacing-sm-md;
+
+            .infoColumn {
+                padding: $spacing-none;
+            }
+        }
+    }
+}
+
+@media (max-width: 660px) {
+    main {
+
+        .card {
+            gap: $spacing-none;
+
+            .imgColumn {
+                width: $spacing-none;
+
+                .signupImg {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $page-break-mobile) {
+    main {
+
+        .card {
+            flex-direction: column-reverse;
+            gap: $spacing-lg-xl;
+            width: $size-full-parent;
+            height: $size-full-parent;
+            padding: $spacing-none;
+            border-radius: 0;
+
+            .infoColumn {
+                padding: $spacing-none $spacing-md $spacing-lg-xl;
+                gap: $spacing-lg-xl;
+
+                .infoSection {
+                    padding: $spacing-none;
+                    gap: $spacing-md-lg;
+
+                    .infoHeader {
+                        font-size: $font-size-header-mobile;
+                    }
+
+                    .updateMatrix {
+                        gap: $spacing-sm-md;
+
+                        .infoParagraph {
+                            line-height: $spacing-md-lg;
+                        }
+                    }
+                }
+            }
+
+            .imgColumn {
+                width: $size-full-parent;
+                height: 280px;
+
+                .signupImg {
+                    display: block;
+                    background-image: $img-signup-mobile;
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0;
+                }
+            }
+        }
     }
 }
