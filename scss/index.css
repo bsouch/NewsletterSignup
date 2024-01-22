@@ -116,6 +116,7 @@ main .card button.subscribeBtn {
 main .card button:hover {
   cursor: pointer;
   background-image: linear-gradient(to right, hsl(0deg, 100%, 65%), hsl(24deg, 100%, 50%));
+  box-shadow: 0 8px 20px 0 hsl(0deg, 100%, 65%);
 }
 
 @media (max-width: 767px) {

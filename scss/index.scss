@@ -134,6 +134,7 @@ main {
             &:hover {
                 cursor: pointer;
                 background-image: linear-gradient(to right, $colour-red, $colour-orange);
+                box-shadow: 0 8px 20px 0 $colour-red;
             }
         }
     }
