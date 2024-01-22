@@ -16,55 +16,82 @@
 <body>
     <main>
         <div class="card">
-            <div class="infoColumn">
+            <div class="signUp">
+                <div class="infoColumn">
 
-                <div class="infoSection">
+                    <div class="infoSection">
 
-                    <span class="infoHeader">
-                        Stay updated!
-                    </span>
-
-                    <span class="infoParagraph">
-                        Join 60,000+ product managers receiving monthly updates on:
-                    </span>
-
-                    <div class="updateMatrix">
-
-                        <span class="tickIcon"></span>
-                        <span class="infoParagraph">
-                            Product discovery and building what matters
+                        <span class="infoHeader header">
+                            Stay updated!
                         </span>
 
-                        <span class="tickIcon"></span>
-                        <span class="infoParagraph">
-                            Measuring to ensure updates are a success
+                        <span class="paragraph">
+                            Join 60,000+ product managers receiving monthly updates on:
                         </span>
 
-                        <span class="tickIcon"></span>
-                        <span class="infoParagraph">
-                            And much more!
-                        </span>
+                        <div class="updateMatrix">
 
+                            <span class="tickIcon"></span>
+                            <span class="paragraph">
+                                Product discovery and building what matters
+                            </span>
+
+                            <span class="tickIcon"></span>
+                            <span class="paragraph">
+                                Measuring to ensure updates are a success
+                            </span>
+
+                            <span class="tickIcon"></span>
+                            <span class="paragraph">
+                                And much more!
+                            </span>
+
+                        </div>
                     </div>
+
+                    <form class="formSection">
+                        <div class="inputWrapper">
+                            <div class="labelWrapper">
+                                <label class="emailLabel">EmailAddress</label>
+                                <label id="EmailInputErrorLabel" class="emailErrorLabel hidden">Valid email
+                                    required</label>
+                            </div>
+                            <input id="EmailInput" class="emailInput"
+                                data-val-pattern="^[a-zA-Z0-9]+@[a-zA-Z]+.[a-zA-Z]+$" placeholder="email@company.com" />
+                        </div>
+                        <button id="SubscribeBtn" class="cardBtn" type="button">Subscribe to monthly
+                            newsletter</button>
+                    </form>
+
+                </div>
+                <div class="imgColumn">
+                    <div class="signupImg"></div>
+                </div>
+            </div>
+
+            <div class="signUpComplete hidden">
+
+                <div class="subscribeInfoRow">
+
+                    <div class="subscribeTickIcon"></div>
+
+                    <div class="subscribeHeader header">
+                        Thanks for subscribing!
+                    </div>
+
+                    <div class="subscribeParagraph paragraph">
+                        A confirmation email has been sent to
+                        <strong id="SubscribedEmail">ash@loremcompany.com</strong>.
+                        Please open it and click the button inside to confirm
+                        your subscription.
+                    </div>
+
+                    <button class="cardBtn" type="button">Dismiss message</button>
+
                 </div>
 
-                <form class="formSection">
-                    <div class="inputWrapper">
-                        <div class="labelWrapper">
-                            <label class="emailLabel">EmailAddress</label>
-                            <label id="EmailInputErrorLabel" class="emailErrorLabel hidden">Valid email required</label>
-                        </div>
-                        <input id="EmailInput" class="emailInput" data-val-pattern="^[a-zA-Z0-9]+@[a-zA-Z]+.[a-zA-Z]+$"
-                            placeholder="email@company.com" />
-                    </div>
-                    <button id="SubscribeBtn" class="subscribeBtn" type="button">Subscribe to monthly
-                        newsletter</button>
-                </form>
+            </div>
 
-            </div>
-            <div class="imgColumn">
-                <div class="signupImg"></div>
-            </div>
         </div>
     </main>
 </body>

@@ -11,10 +11,7 @@ main {
     background-color: $colour-charcoal-grey;
 
     .card {
-        @include displayFlexRow;
-        gap: $spacing-lg;
         border-radius: $border-radius-std;
-        padding: $spacing-md;
         background-color: $colour-white;
 
         .hidden {
@@ -24,9 +21,71 @@ main {
         span,
         button,
         input,
-        label {
+        label,
+        .header,
+        .paragraph {
             font-family: $font-family-roboto;
         }
+
+        .header {
+            font-size: $font-size-header;
+            font-weight: $font-weight-700;
+            line-height: $font-header-line-height;
+        }
+
+        .paragraph {
+            font-size: $font-size-paragraph;
+            line-height: $font-paragraph-line-height;
+        }
+
+        input {
+            width: $size-full-parent;
+            margin-top: $spacing-xs;
+            border-radius: $border-radius-input;
+            height: $size-input-height;
+            text-indent: $spacing-md;
+            color: $colour-grey;
+            border: 1px solid $colour-grey;
+            padding: 0;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &.hasError,
+            &.hasError::placeholder {
+                background-color: $colour-light-red;
+                color: $colour-tomato;
+                border-color: $colour-tomato;
+                opacity: 1;
+            }
+        }
+
+        button {
+
+            &.cardBtn {
+                width: $size-full-parent;
+                height: $size-button-height;
+                border-radius: $border-radius-input;
+                border: none;
+                background-color: $colour-dark-slate-grey;
+                color: $colour-white;
+                font-weight: $font-weight-400;
+                border: 1px solid transparent;
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-image: linear-gradient(to right, $colour-red, $colour-orange);
+                box-shadow: 0 8px 20px 0 $colour-red;
+            }
+        }
+    }
+
+    .signUp {
+        @include displayFlexRow;
+        gap: $spacing-lg;
+        padding: $spacing-md;
 
         .infoColumn {
             @include displayFlexCol;
@@ -39,11 +98,6 @@ main {
             .infoSection {
                 @include displayFlexCol;
                 gap: $spacing-md;
-
-                .infoHeader {
-                    font-size: $font-size-header;
-                    font-weight: $font-weight-700;
-                }
 
                 .updateMatrix {
                     @include displayGrid;
@@ -81,62 +135,41 @@ main {
                 }
             }
         }
+    }
 
-        .imgColumn {
-            height: $size-desktop-card-height;
-            width: $size-max-width;
+    .imgColumn {
+        height: $size-desktop-card-height;
+        width: $size-max-width;
 
-            .signupImg {
-                background: $img-signup-desktop;
-                background-repeat: no-repeat;
-                border-radius: $border-radius-sm;
-                height: $size-full-parent;
-                width: $size-full-parent;
-            }
-        }
-
-        input {
+        .signupImg {
+            background: $img-signup-desktop;
+            background-repeat: no-repeat;
+            border-radius: $border-radius-sm;
+            height: $size-full-parent;
             width: $size-full-parent;
-            margin-top: $spacing-xs;
-            border-radius: $border-radius-input;
-            height: $size-input-height;
-            text-indent: $spacing-md;
-            color: $colour-grey;
-            border: 1px solid $colour-grey;
-            padding: 0;
-
-            &:hover {
-                cursor: pointer;
-            }
-
-            &.hasError,
-            &.hasError::placeholder {
-                background-color: $colour-light-red;
-                color: $colour-tomato;
-                border-color: $colour-tomato;
-                opacity: 1;
-            }
         }
+    }
 
-        button {
+    .signUpComplete {
+        @include displayFlexCol;
+        gap: $spacing-lg-xl;
+    }
 
-            &.subscribeBtn {
-                width: $size-full-parent;
-                height: $size-button-height;
-                border-radius: $border-radius-input;
-                border: none;
-                background-color: $colour-dark-slate-grey;
-                color: $colour-white;
-                font-weight: $font-weight-400;
-                border: 1px solid transparent;
-            }
+    .subscribeInfoRow {
+        @include displayFlexCol;
+        gap: $spacing-lg-xl;
+    }
 
-            &:hover {
-                cursor: pointer;
-                background-image: linear-gradient(to right, $colour-red, $colour-orange);
-                box-shadow: 0 8px 20px 0 $colour-red;
-            }
-        }
+    .subscribeTickIcon {
+        background-image: $icon-success;
+        background-repeat: no-repeat;
+        width: 65px;
+        height: 65px;
+    }
+
+    .signUpComplete {
+        padding: $spacing-xxl;
+        max-width: $size-subscribe-confirmed-max-width;
     }
 }
 
@@ -144,10 +177,13 @@ main {
     main {
 
         .card {
-            gap: $spacing-sm-md;
 
-            .infoColumn {
-                padding: $spacing-none;
+            .signUp {
+                gap: $spacing-sm-md;
+
+                .infoColumn {
+                    padding: $spacing-none;
+                }
             }
         }
     }
@@ -157,13 +193,16 @@ main {
     main {
 
         .card {
-            gap: $spacing-none;
 
-            .imgColumn {
-                width: $spacing-none;
+            .signUp {
+                gap: $spacing-none;
 
-                .signupImg {
-                    display: none;
+                .imgColumn {
+                    width: $spacing-none;
+
+                    .signupImg {
+                        display: none;
+                    }
                 }
             }
         }
@@ -174,44 +213,47 @@ main {
     main {
 
         .card {
-            flex-direction: column-reverse;
-            gap: $spacing-lg-xl;
-            width: $size-full-parent;
-            height: $size-full-parent;
-            padding: $spacing-none;
             border-radius: 0;
 
-            .infoColumn {
-                padding: $spacing-none $spacing-md $spacing-lg-xl;
+            .header {
+                font-size: $font-size-header-mobile;
+            }
+
+            .signUp {
+                width: $size-full-parent;
+                height: $size-full-parent;
+                flex-direction: column-reverse;
                 gap: $spacing-lg-xl;
+                padding: $spacing-none;
 
-                .infoSection {
-                    padding: $spacing-none;
-                    gap: $spacing-md-lg;
+                .infoColumn {
+                    padding: $spacing-none $spacing-md $spacing-lg-xl;
+                    gap: $spacing-lg-xl;
 
-                    .infoHeader {
-                        font-size: $font-size-header-mobile;
-                    }
+                    .infoSection {
+                        padding: $spacing-none;
+                        gap: $spacing-md-lg;
 
-                    .updateMatrix {
-                        gap: $spacing-sm-md;
+                        .updateMatrix {
+                            gap: $spacing-sm-md;
 
-                        .infoParagraph {
-                            line-height: $spacing-md-lg;
+                            .infoParagraph {
+                                line-height: $spacing-md-lg;
+                            }
                         }
                     }
                 }
-            }
 
-            .imgColumn {
-                width: $size-full-parent;
-                height: 280px;
+                .imgColumn {
+                    width: $size-full-parent;
+                    height: 280px;
 
-                .signupImg {
-                    display: block;
-                    background-image: $img-signup-mobile;
-                    border-top-left-radius: 0;
-                    border-top-right-radius: 0;
+                    .signupImg {
+                        display: block;
+                        background-image: $img-signup-mobile;
+                        border-top-left-radius: 0;
+                        border-top-right-radius: 0;
+                    }
                 }
             }
         }
