@@ -1,3 +1,6 @@
+const SignUpSectionID = 'SignUpSection';
+const SignUpSuccessDialogID = 'SignUpSuccessDialog';
+const SubscribedEmailElementID = 'SubscribedEmail';
 const EmailInputID = 'EmailInput';
 const EmailInputErrorLabel = 'EmailInputErrorLabel';
 const DataValPattern = 'valPattern';
@@ -8,7 +11,11 @@ $(() => {
 
     $('#SubscribeBtn').on('click', () => {
         subscribe();
-    })
+    });
+
+    $('#DismissBtn').on('click', () => {
+        toggleSuccessDialog();
+    });
 
 });
 
@@ -23,7 +30,8 @@ const subscribe = () => {
         return;
     }
 
-    //Show submission.
+    toggleSuccessDialog();
+    updateSuccessDialogEmail();
 }
 
 const validateEmailInput = (emailInput) => {
@@ -41,4 +49,14 @@ const addErrors = (emailInput, emailInputErrorLabel) => {
 const removeErrors = (emailInput, emailInputErrorLabel) => {
     emailInput.removeClass(`${HasErrorClass}`);
     emailInputErrorLabel.addClass(`${HiddenClass}`);
+}
+
+const toggleSuccessDialog = () => {
+    $(`#${SignUpSectionID}`).toggleClass(`${HiddenClass}`);
+    $(`#${SignUpSuccessDialogID}`).toggleClass(`${HiddenClass}`);
+}
+
+const updateSuccessDialogEmail = () => {
+    var emailText = $(`#${EmailInputID}`).val();
+    $(`#${SubscribedEmailElementID}`).text(emailText);
 }
