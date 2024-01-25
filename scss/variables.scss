@@ -1,0 +1,49 @@
+$page-break-mobile: 375px;
+$page-break-desktop: 1440px;
+
+$colour-tomato: hsl(4, 100%, 67%);
+$colour-dark-slate-grey: hsl(234, 29%, 20%);
+$colour-charcoal-grey: hsl(235, 18%, 26%);
+$colour-grey: hsl(231, 7%, 60%);
+$colour-white: hsl(0, 0%, 100%);
+$colour-light-red: hsl(0, 100%, 95%);
+$colour-red: hsl(0, 100%, 65%);
+$colour-orange: hsl(24, 100%, 50%);
+
+$font-size-paragraph: 1rem;
+$font-size-header: 3.125rem;
+$font-size-header-mobile: 2.5rem;
+$font-size-input-label: 0.75rem;
+$font-family-roboto: "Roboto";
+$font-weight-400: 400;
+$font-weight-700: 700;
+$font-header-line-height: 50px;
+$font-paragraph-line-height: 25px;
+
+$spacing-md: 20px;
+$spacing-md-lg: 25px;
+$spacing-lg: 30px;
+$spacing-lg-xl: 35px;
+$spacing-xxl: 50px;
+$spacing-sm-md: 15px;
+$spacing-sm: 10px;
+$spacing-xs: 6px;
+$spacing-none: 0;
+
+$border-radius-std: 25px;
+$border-radius-sm: 15px;
+$border-radius-input: 5px;
+
+$img-signup-desktop: url("../images/illustration-sign-up-desktop.svg");
+$img-signup-mobile: url("../images/illustration-sign-up-mobile.svg");
+$icon-list: url("../images/icon-list.svg");
+$icon-success: url("../images/icon-success.svg");
+
+$size-max-width: 400px;
+$size-subscribe-confirmed-max-width: 380px;
+$size-icon: 22px;
+$size-full-parent: 100%;
+$size-full-viewport: 100dvb;
+$size-input-height: 50px;
+$size-button-height: 50px;
+$size-desktop-card-height: 600px;

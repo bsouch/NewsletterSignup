@@ -1,0 +1,277 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+body,
+main {
+    min-block-size: $size-full-viewport;
+}
+
+main {
+    @include displayGridCenter;
+    background-color: $colour-charcoal-grey;
+
+    .card {
+        border-radius: $border-radius-std;
+        background-color: $colour-white;
+
+        .hidden {
+            display: none;
+        }
+
+        span,
+        button,
+        input,
+        label,
+        .header,
+        .paragraph {
+            font-family: $font-family-roboto;
+        }
+
+        .header {
+            font-size: $font-size-header;
+            font-weight: $font-weight-700;
+            line-height: $font-header-line-height;
+        }
+
+        .paragraph {
+            font-size: $font-size-paragraph;
+            line-height: $font-paragraph-line-height;
+        }
+
+        input {
+            width: $size-full-parent;
+            margin-top: $spacing-xs;
+            border-radius: $border-radius-input;
+            height: $size-input-height;
+            text-indent: $spacing-md;
+            color: $colour-grey;
+            border: 1px solid $colour-grey;
+            padding: 0;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &.hasError,
+            &.hasError::placeholder {
+                background-color: $colour-light-red;
+                color: $colour-tomato;
+                border-color: $colour-tomato;
+                opacity: 1;
+            }
+        }
+
+        button {
+
+            &.cardBtn {
+                width: $size-full-parent;
+                height: $size-button-height;
+                border-radius: $border-radius-input;
+                border: none;
+                background-color: $colour-dark-slate-grey;
+                color: $colour-white;
+                font-weight: $font-weight-400;
+                border: 1px solid transparent;
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-image: linear-gradient(to right, $colour-red, $colour-orange);
+                box-shadow: 0 8px 20px 0 $colour-red;
+            }
+        }
+    }
+
+    .signUp {
+        @include displayFlexRow;
+        gap: $spacing-lg;
+        padding: $spacing-md;
+
+        .infoColumn {
+            @include displayFlexCol;
+            gap: $spacing-lg;
+            padding: $spacing-lg;
+            justify-content: center;
+            max-width: $size-max-width;
+            flex-shrink: 3;
+
+            .infoSection {
+                @include displayFlexCol;
+                gap: $spacing-md;
+
+                .updateMatrix {
+                    @include displayGrid;
+
+                    .tickIcon {
+                        background: $icon-list;
+                        background-repeat: no-repeat;
+                        height: $size-icon;
+                        width: $size-icon;
+                    }
+                }
+            }
+
+            .formSection {
+                @include displayFlexCol;
+                gap: $spacing-md;
+
+                .inputWrapper {
+
+                    .labelWrapper {
+                        @include displayFlexRow;
+                        justify-content: space-between;
+
+                        .emailLabel {
+                            font-size: $font-size-input-label;
+                            font-weight: $font-weight-700;
+                        }
+
+                        .emailErrorLabel {
+                            float: right;
+                            font-size: $font-size-input-label;
+                            color: $colour-tomato;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .imgColumn {
+        height: $size-desktop-card-height;
+        width: $size-max-width;
+
+        .signupImg {
+            background: $img-signup-desktop;
+            background-repeat: no-repeat;
+            border-radius: $border-radius-sm;
+            height: $size-full-parent;
+            width: $size-full-parent;
+        }
+    }
+
+    .signUpComplete {
+        @include displayFlexCol;
+        gap: $spacing-lg-xl;
+    }
+
+    .subscribeInfoRow {
+        @include displayFlexCol;
+        gap: $spacing-lg-xl;
+    }
+
+    .subscribeTickIcon {
+        background-image: $icon-success;
+        background-repeat: no-repeat;
+        width: 65px;
+        height: 65px;
+    }
+
+    .signUpComplete {
+        padding: $spacing-xxl;
+        max-width: $size-subscribe-confirmed-max-width;
+    }
+}
+
+@media (max-width: 767px) {
+    main {
+
+        .card {
+
+            .signUp {
+                gap: $spacing-sm-md;
+
+                .infoColumn {
+                    padding: $spacing-none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 660px) {
+    main {
+
+        .card {
+
+            .signUp {
+                gap: $spacing-none;
+
+                .imgColumn {
+                    width: $spacing-none;
+
+                    .signupImg {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $page-break-mobile) {
+    main {
+
+        .card {
+            border-radius: 0;
+
+            .header {
+                font-size: $font-size-header-mobile;
+            }
+
+            .signUp {
+                width: $size-full-parent;
+                height: $size-full-parent;
+                flex-direction: column-reverse;
+                gap: $spacing-lg-xl;
+                padding: $spacing-none;
+
+                .infoColumn {
+                    padding: $spacing-none $spacing-md $spacing-lg-xl;
+                    gap: $spacing-lg-xl;
+
+                    .infoSection {
+                        padding: $spacing-none;
+                        gap: $spacing-md-lg;
+
+                        .updateMatrix {
+                            gap: $spacing-sm-md;
+
+                            .infoParagraph {
+                                line-height: $spacing-md-lg;
+                            }
+                        }
+                    }
+                }
+
+                .imgColumn {
+                    width: $size-full-parent;
+                    height: 280px;
+
+                    .signupImg {
+                        display: block;
+                        background-image: $img-signup-mobile;
+                        border-top-left-radius: 0;
+                        border-top-right-radius: 0;
+                    }
+                }
+            }
+
+            .signUpComplete {
+                height: $size-full-viewport;
+                justify-content: space-between;
+                padding: $spacing-none;
+
+                .subscribeInfoRow {
+                    @include displayFlexCol;
+                    gap: $spacing-lg-xl;
+                    padding: 150px $spacing-md $spacing-none;
+                }
+
+                .dismissRow {
+                    padding: $spacing-none $spacing-md $spacing-lg-xl;
+                }
+            }
+        }
+    }
+}

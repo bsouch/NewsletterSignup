@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss/normalise.css">
+    <link rel="stylesheet" href="scss/index.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+        </script>
+    <script src="js/index.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <div class="card">
+            <div id="SignUpSection" class="signUp">
+                <div class="infoColumn">
+                    <div class="infoSection">
+                        <span class="infoHeader header">
+                            Stay updated!
+                        </span>
+                        <span class="paragraph">
+                            Join 60,000+ product managers receiving monthly updates on:
+                        </span>
+                        <div class="updateMatrix">
+                            <span class="tickIcon"></span>
+                            <span class="paragraph">
+                                Product discovery and building what matters
+                            </span>
+                            <span class="tickIcon"></span>
+                            <span class="paragraph">
+                                Measuring to ensure updates are a success
+                            </span>
+                            <span class="tickIcon"></span>
+                            <span class="paragraph">
+                                And much more!
+                            </span>
+                        </div>
+                    </div>
+
+                    <form class="formSection">
+                        <div class="inputWrapper">
+                            <div class="labelWrapper">
+                                <label class="emailLabel">EmailAddress</label>
+                                <label id="EmailInputErrorLabel" class="emailErrorLabel hidden">Valid email
+                                    required</label>
+                            </div>
+                            <input id="EmailInput" class="emailInput"
+                                data-val-pattern="^[a-zA-Z0-9]+@[a-zA-Z]+.[a-zA-Z]+$" placeholder="email@company.com" />
+                        </div>
+                        <button id="SubscribeBtn" class="cardBtn" type="button">Subscribe to monthly
+                            newsletter</button>
+                    </form>
+
+                </div>
+                <div class="imgColumn">
+                    <div class="signupImg"></div>
+                </div>
+            </div>
+
+            <div id="SignUpSuccessDialog" class="signUpComplete hidden">
+                <div class="subscribeInfoRow">
+                    <div class="subscribeTickIcon"></div>
+                    <div class="subscribeHeader header">
+                        Thanks for subscribing!
+                    </div>
+                    <div class="subscribeParagraph paragraph">
+                        A confirmation email has been sent to
+                        <strong id="SubscribedEmail"></strong>.
+                        Please open it and click the button inside to confirm
+                        your subscription.
+                    </div>
+                </div>
+                <div class="dismissRow">
+                    <button id="DismissBtn" class="cardBtn" type="button">Dismiss message</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
