@@ -3,7 +3,7 @@
 
 body,
 main {
-    min-block-size: 100dvb;
+    min-block-size: $size-full-viewport;
 }
 
 main {
@@ -254,6 +254,22 @@ main {
                         border-top-left-radius: 0;
                         border-top-right-radius: 0;
                     }
+                }
+            }
+
+            .signUpComplete {
+                height: $size-full-viewport;
+                justify-content: space-between;
+                padding: $spacing-none;
+
+                .subscribeInfoRow {
+                    @include displayFlexCol;
+                    gap: $spacing-lg-xl;
+                    padding: 150px $spacing-md $spacing-none;
+                }
+
+                .dismissRow {
+                    padding: $spacing-none $spacing-md $spacing-lg-xl;
                 }
             }
         }

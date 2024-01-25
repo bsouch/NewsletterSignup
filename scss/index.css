@@ -205,6 +205,20 @@ main .signUpComplete {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
+  main .card .signUpComplete {
+    height: 100dvb;
+    justify-content: space-between;
+    padding: 0;
+  }
+  main .card .signUpComplete .subscribeInfoRow {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding: 150px 20px 0;
+  }
+  main .card .signUpComplete .dismissRow {
+    padding: 0 20px 35px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
